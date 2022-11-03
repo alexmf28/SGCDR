@@ -33,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto bg-dark">      
       <li class="nav-item active">
-        <i class="bi bi-cart"></i>
+        <i class="fa-solid text-white fa-cart-shopping fa-2x"></i>
       </li>
       
     </ul>

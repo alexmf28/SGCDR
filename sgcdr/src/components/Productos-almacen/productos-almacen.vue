@@ -2,7 +2,7 @@
             <div class="container">
                 <div class="row">
                    
-                    <div class="col-sm"
+                    <div class="col-sm my-4"
                     v-for="n in 12"
                     :v-key="n">
                        <div 
@@ -15,10 +15,11 @@
                             <p>Laptop Gamer MSI GL65 15.6" 16GB RAM 512GB SSD</p>
                             <p><strong>S/ 7,390 un</strong></p>
                         </div> 
-                        <div>
-                            <button type="button" class="btn btn-outline-info">Agregar</button>
-                            <button type="button" class="btn btn-outline-info">Agregar</button>
-                            <button type="button" class="btn btn-outline-info">Agregar</button>
+                        <div class="d-flex">
+                            <button v-if="contador < 1" v-on:click="contador = contador + 1" type="button" class="btn btn-outline-info">Agregar</button>
+                            <button v-if="contador > 0" v-on:click="contador = contador - 1" type="button" class="btn btn-outline-info"><i class="fa-solid fa-minus"></i></button>
+                            <p v-if="contador > 0">{{contador}}</p>
+                            <button v-if="contador > 0" v-on:click="contador = contador + 1" type="button" class="btn btn-outline-info"><i class="fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -26,13 +27,16 @@
 </template>
 <script>
 import axios from 'axios';
-import agregar from '';
+
 export default {
     name: 'productos-almacen',
     data() {
         return {
             users: null,
-        };
+            contador: 0
+           
+        };        
+       
     },
     created: function () {
         axios
@@ -40,6 +44,11 @@ export default {
             .then(res => {
                 this.users = res.data;
             })
+    },
+    ocultarAgregar(){
+        if(contador += 1){
+
+        }
     }
 }
 </script>
