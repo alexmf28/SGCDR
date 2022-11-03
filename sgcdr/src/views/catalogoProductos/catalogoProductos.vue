@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col  bg-secondary ">
-            <h1 class="display-4 text-left m-5 text-white">Almacén</h1>
+            <h5 class="display-4 text-left m-4 text-white">Almacén</h5>
         </div>
         <div class="d-flex col-12 mt-3">
             <div class="col-3">
@@ -17,9 +17,10 @@
                     <a class="dropdown-item btn btn-light" href="#">Monitores</a>
                 </div>
             </div>
-            <div class="col-5">
-                
-            </div>
+            <productosalmacen>
+
+            </productosalmacen>
+
         </div>
 
     </div>
@@ -27,8 +28,10 @@
 </template>
 <script>
 import axios from 'axios';
+import productosalmacen from '../../components/Productos-almacen/productos-almacen.vue'
 export default {
     name: 'catalogoProductos',
+    components: { productosalmacen },
     data() {
         return {
             users: null,
@@ -43,3 +46,9 @@ export default {
     }
 }
 </script>
+<style>
+.logo{
+  width:50%;
+
+}
+</style>
